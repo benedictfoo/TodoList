@@ -3,6 +3,7 @@ import CheckTitle from "./CheckTitle.js";
 import CheckOptionalDate from "./CheckOptionalDate.js";
 import CheckOptionalDescription from "./CheckOptionalDescription.js";
 import LogError from "./LogError.js";
+import CheckOptionalPriority from "./CheckOptionalPriority.js";
 function MakeTask(taskObject) {
   if (!taskObject) {
     LogError("No task given for saving");
@@ -11,9 +12,14 @@ function MakeTask(taskObject) {
   if (
     CheckTitle(taskObject.title) &&
     CheckOptionalDate(taskObject.date) &&
-    CheckOptionalDescription(taskObject.description)
+    CheckOptionalDescription(taskObject.description) &&
+    CheckOptionalPriority(taskObject.priority)
   ) {
     console.log(Task(taskObject));
   }
 }
-MakeTask({ title: "YO", description: "Description", date: Date.now() });
+MakeTask({
+  title: "YO",
+  description: "Description",
+  date: 8640000000000000,
+});

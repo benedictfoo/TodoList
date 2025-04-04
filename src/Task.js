@@ -6,7 +6,7 @@ export default function (taskObject) {
     taskObject.parent = null;
   }
   if (!taskObject.priority) {
-    taskObject.priority = false;
+    taskObject.priority = 4;
   }
   if (!taskObject.date) {
     taskObject.date = Date.now();
