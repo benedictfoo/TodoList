@@ -1,9 +1,9 @@
 import LogError from "./LogError.js";
-export default function (taskObject) {
-  if (!taskObject?.title) {
+export default function (title) {
+  if (!title) {
     LogError("Title is required");
     return false;
-  } else if (taskObject.title.length > 500) {
+  } else if (title.length > 500) {
     LogError("Title cannot be greater than 500");
     return false;
   } else {
