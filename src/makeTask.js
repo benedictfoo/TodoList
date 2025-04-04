@@ -4,7 +4,7 @@ import CheckOptionalDate from "./CheckOptionalDate.js";
 import CheckOptionalDescription from "./CheckOptionalDescription.js";
 import LogError from "./LogError.js";
 import CheckOptionalPriority from "./CheckOptionalPriority.js";
-function MakeTask(taskObject) {
+export default function MakeTask(taskObject) {
   if (!taskObject) {
     LogError("No task given for saving");
     return;
@@ -15,12 +15,12 @@ function MakeTask(taskObject) {
     CheckOptionalDescription(taskObject.description) &&
     CheckOptionalPriority(taskObject.priority)
   ) {
-    console.log(Task(taskObject));
+    return Task(taskObject);
   }
 }
-MakeTask({
-  title: "YO",
-  description: "Description",
-  date: 8640000000000000,
-  priority: 22,
-});
+// MakeTask({
+//   title: "YO",
+//   description: "Description",
+//   date: 8640000000000000,
+//   priority: 22,
+// });
