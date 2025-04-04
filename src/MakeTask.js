@@ -22,4 +22,5 @@ MakeTask({
   title: "YO",
   description: "Description",
   date: 8640000000000000,
+  priority: 22,
 });
