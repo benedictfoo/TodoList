@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 export default function (taskObject) {
   if (!taskObject.description) {
     taskObject.description = null;
@@ -11,6 +12,7 @@ export default function (taskObject) {
   if (!taskObject.date) {
     taskObject.date = Date.now();
   }
+  taskObject.id = uuidv4();
   taskObject.completed = false;
   taskObject.tasks = null;
   return taskObject;

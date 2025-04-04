@@ -2,7 +2,8 @@
   "name": "todolist",
   "version": "1.0.0",
   "description": "Todo App",
-  "private": true,"type": "module",
+  "private": true,
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "number-text": "node personal/number-text.js steps.txt",
@@ -26,6 +27,8 @@
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
   }
-  
 }
