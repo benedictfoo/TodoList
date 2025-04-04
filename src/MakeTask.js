@@ -1,13 +1,8 @@
-import LogError from "./LogError.js";
 import Task from "./Task.js";
-
+import CheckTitle from "./CheckTitle.js";
+import CheckDate from "./CheckDate.js";
 function MakeTask(taskObject) {
-  if (!taskObject.title) {
-    LogError("Title is required");
-    return;
-  } else {
+  if (CheckTitle(taskObject) && CheckDate(taskObject))
     console.log(Task(taskObject));
-    return;
-  }
 }
-MakeTask({ title: "Yes" });
+MakeTask({ title: "HEY", date: Date.now() });
