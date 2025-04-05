@@ -1,5 +1,5 @@
 export default function tasksStore() {
-  const store = [
+  return [
     {
       id: 1,
       title: "Create wireframes",
@@ -43,5 +43,4 @@ export default function tasksStore() {
       date: 8640000000000000,
     },
   ];
-  return { store };
 }
