@@ -4,6 +4,7 @@ let store = [
     title: "Create wireframes",
     date: 8640000000000000,
     priority: "high",
+    headId: "z",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ let store = [
     parentId: 1,
     title: "Research competitors' websites",
     date: 8640000000000000,
+    headId: "z",
   },
   {
     id: 5,
@@ -34,6 +36,7 @@ let store = [
     parentId: 4,
     title: "Check out design trends",
     date: 8640000000000000,
+    headId: "z",
   },
   {
     id: 7,
