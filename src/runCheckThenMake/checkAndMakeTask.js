@@ -18,12 +18,9 @@ export default function MakeTask(input = null) {
     checkTitle(title) &&
     checkOptionalDate(date) &&
     checkOptionalDescription(description) &&
-    checkOptionalPriority(priority)
+    checkOptionalPriority(priority) &&
+    (parentId ? checkOptionalParentId(parentId) : true)
   ) {
-    if (parentId) {
-      if (checkOptionalParentId(parentId)) {
-        return Task({ title, date, description, priority, parentId });
-      }
-    }
+    return Task({ title, date, description, priority, parentId });
   }
 }
