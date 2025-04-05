@@ -48,3 +48,6 @@ export function getTasksStore() {
 export function setTasksStore(task) {
   store.push(task);
 }
+export function filterTasksStore(callback) {
+  store = store.filter(callback);
+}
