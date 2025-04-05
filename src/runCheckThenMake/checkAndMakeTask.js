@@ -4,18 +4,26 @@ import checkOptionalDate from "../checkTaskProperties/checkOptionalDate.js";
 import checkOptionalDescription from "../checkTaskProperties/checkOptionalDescription.js";
 import LogError from "../logging/LogError.js";
 import checkOptionalPriority from "../checkTaskProperties/checkOptionalPriority.js";
+import checkOptionalParentId from "../checkTaskProperties/checkOptionalParentId.js";
+
 export default function MakeTask(input = null) {
   if (!input) {
     LogError("No task given for saving");
     return;
   }
-  const { title, date, description, priority } = input;
+
+  const { title, date, description, priority, parentId } = input;
+
   if (
     checkTitle(title) &&
     checkOptionalDate(date) &&
     checkOptionalDescription(description) &&
     checkOptionalPriority(priority)
   ) {
-    return Task({ title, date, description, priority });
+    if (parentId) {
+      if (checkOptionalParentId(parentId)) {
+        return Task({ title, date, description, priority, parentId });
+      }
+    }
   }
 }

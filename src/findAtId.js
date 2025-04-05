@@ -1,6 +1,5 @@
-import Store from "./store/TasksStore";
-export default function findAtId(id) {
-  const findInTasksStore = Store.find((child) => (child.id = id));
-  // console.log(findInTasksStore);
+export default function findAtId(Store, id) {
+  const findInTasksStore = Store.find((child) => child.id === id);
+
   return findInTasksStore;
 }
