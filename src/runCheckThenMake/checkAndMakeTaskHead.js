@@ -10,5 +10,3 @@ export default function checkAndMakeTaskHead(taskHeadObject) {
     return TaskHead(taskHeadObject);
   }
 }
-
-console.log(checkAndMakeTaskHead({ name: "Dad stuff" }));

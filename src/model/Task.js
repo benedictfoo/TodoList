@@ -1,23 +1,13 @@
 import { v4 as uuidv4 } from "uuid";
 
-export default function (taskObject) {
-  if (!taskObject.description) {
-    taskObject.description = null;
-  }
-  if (!taskObject.parentId) {
-    taskObject.parentId = null;
-  }
-  if (!taskObject.priority) {
-    taskObject.priority = 4;
-  }
-  if (!taskObject.date) {
-    taskObject.date = Date.now();
-  }
-  if (!taskObject.id) {
-    taskObject.id = uuidv4();
-  }
-
-  taskObject.completed = false;
-  taskObject.tasks = null;
-  return taskObject;
+export default function ({
+  description = null,
+  parentId = null,
+  priority = 4,
+  date = Date.now(),
+  id = uuidv4(),
+  completed = false,
+  tasks = null,
+}) {
+  return { description, parentId, priority, date, id, completed, tasks };
 }
