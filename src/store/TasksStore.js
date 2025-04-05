@@ -1,4 +1,4 @@
-export default function tasksStore() {
+export default function TasksStore() {
   return [
     {
       id: 1,
