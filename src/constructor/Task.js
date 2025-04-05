@@ -1,13 +1,14 @@
 import { v4 as uuidv4 } from "uuid";
 
 export default function ({
+  title,
   description = null,
-  parentId = null,
-  priority = 4,
-  date = Date.now(),
   id = uuidv4(),
+  parentId = null,
+  date = Date.now(),
+  priority = 4,
   completed = false,
   tasks = null,
 }) {
-  return { description, parentId, priority, date, id, completed, tasks };
+  return { title, description, id, parentId, date, priority, completed, tasks };
 }
