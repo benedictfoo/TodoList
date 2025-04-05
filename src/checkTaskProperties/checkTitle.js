@@ -1,4 +1,4 @@
-import LogError from "./LogError.js";
+import LogError from "../LogError.js";
 export default function (title) {
   if (!title) {
     LogError("Title is required");

@@ -1,4 +1,4 @@
-import LogError from "./LogError.js";
+import LogError from "../LogError.js";
 
 export default function (priority) {
   if (priority !== undefined) {
