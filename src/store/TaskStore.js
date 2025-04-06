@@ -51,3 +51,6 @@ export function getTasksFromStore() {
 export function addTasktoStore(task) {
   store.push(task);
 }
+export function deleteTaskByIdFromStore(id) {
+  store = store.filter((task) => task.id !== id);
+}
