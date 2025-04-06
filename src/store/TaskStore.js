@@ -6,7 +6,7 @@ let store = [
     date: 1743922184643,
     priority: 2,
     completed: false,
-    projectId: "759617b5-968d-43d8-840c-2672637ac7c3",
+    projectId: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327", // Project 1
   },
   {
     title: "Task 2",
@@ -15,7 +15,7 @@ let store = [
     date: 1743922184643,
     priority: 4,
     completed: false,
-    projectId: "e486f830-0ca6-456f-bec4-413e8d8929b8",
+    projectId: "f24be39c-b029-4fac-8a8c-07f9d57b9a79", // Project 2
   },
   {
     title: "Task 3",
@@ -24,7 +24,7 @@ let store = [
     date: 1743922184643,
     priority: 3,
     completed: true,
-    projectId: "5f22c1ce-e391-4f03-a823-ffeeb014fa05",
+    projectId: "363b3e2b-448b-4bea-ba37-3ceb73154a6d", // Project 3
   },
   {
     title: "Task 4",
@@ -33,7 +33,7 @@ let store = [
     date: 1743922184643,
     priority: 1,
     completed: true,
-    projectId: "700328e8-ea4b-435e-a6f9-66bd73b7ab5c",
+    projectId: "e660a3fd-6c8a-4e8e-be46-665a9cabb530", // Project 4
   },
   {
     title: "Task 5",
@@ -42,7 +42,7 @@ let store = [
     date: 1743922184645,
     priority: 1,
     completed: false,
-    projectId: "f7e54883-6916-46d9-be99-e23a3950acb8",
+    projectId: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327", // Project 1
   },
 ];
 export function getTasksFromStore() {
