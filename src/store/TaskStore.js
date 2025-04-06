@@ -8,6 +8,7 @@ let store = [
     completed: false,
     projectId: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327", // Project 1
   },
+
   {
     title: "Task 2",
     description: "This is a task description.",

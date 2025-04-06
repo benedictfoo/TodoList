@@ -5,7 +5,7 @@ export default function (id) {
     LogError("Something wrong.Invalid id.");
     return false;
   }
-  const foundTask = getTasksFromStore().find((task) => task.id);
+  const foundTask = getTasksFromStore().find((task) => id === task.id);
   if (!foundTask) {
     LogError("Unable to find task");
     return false;

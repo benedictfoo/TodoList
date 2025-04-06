@@ -1,3 +1,5 @@
+import { getTasksFromStore } from "./TaskStore.js";
+
 let store = [
   {
     name: "Project 1",
@@ -29,4 +31,20 @@ export function getProjectsFromStore() {
 }
 export function addProjectToStore(project) {
   store.push(project);
+}
+export function deleteProjectByIdFromStore(id) {
+  store = store.filter((project) => project.id !== id);
+}
+
+export function deleteProjectIfNoChildrenFromStore(projectId) {
+  const foundOtherWithProject = getTasksFromStore().find(
+    (task) => task.projectId === projectId
+  );
+  // if none left delete from project store
+  if (!foundOtherWithProject) {
+    deleteProjectByIdFromStore(projectId);
+    // get projects
+    console.log(getTasksFromStore());
+    console.log(getProjectsFromStore());
+  }
 }
