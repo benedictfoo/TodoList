@@ -1,3 +1,4 @@
+import returnFalseOrValidProjectFields from "../getFields/returnFalseOrValidProjectFields.js";
 import { getTasksFromStore } from "./TaskStore.js";
 
 let store = [
@@ -47,4 +48,35 @@ export function deleteProjectIfNoChildrenFromStore(projectId) {
     console.log(getTasksFromStore());
     console.log(getProjectsFromStore());
   }
+}
+
+export function updateProjectByIdFromStore(id, input) {
+  if (!input) {
+    LogError("Invalid Input");
+    return false;
+  }
+  const foundProject = getProjectsFromStore().find(
+    (project) => project.id === id
+  );
+  if (!foundProject) {
+    LogError("Something went wrong.Project cannot be updated.");
+    return false;
+  }
+  const validProjectFields = returnFalseOrValidProjectFields(input);
+  const cleanedValidProjectFields = Object.entries(validProjectFields)
+    .filter(([key, value]) => value !== undefined)
+    .reduce((obj, [key, value]) => {
+      obj[key] = value;
+      return obj;
+    }, {});
+
+  if (cleanedValidProjectFields) {
+    store = getProjectsFromStore().map((project) => {
+      if (project.id !== id) {
+        return project;
+      } else {
+        return { ...project, ...cleanedValidProjectFields };
+      }
+    });
+  } else return false;
 }
