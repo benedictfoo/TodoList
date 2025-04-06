@@ -1,3 +1,6 @@
+import returnFalseOrValidTaskFields from "../getFields/returnFalseOrValidTaskFields.js";
+import LogError from "../logging/LogError.js";
+
 let store = [
   {
     title: "Task 1",
@@ -54,4 +57,35 @@ export function addTasktoStore(task) {
 }
 export function deleteTaskByIdFromStore(id) {
   store = store.filter((task) => task.id !== id);
+}
+
+export function updateTaskByIdFromStore(id, input) {
+  if (!input) {
+    LogError("Invalid Input");
+    return false;
+  }
+  const foundTask = getTasksFromStore().find((task) => task.id === id);
+  if (!foundTask) {
+    LogError("Something went wrong.Task cannot be updated.");
+    return false;
+  }
+  const validTaskFields = returnFalseOrValidTaskFields(input, {
+    titleRequired: false,
+  });
+  const cleanedValidTaskFields = Object.entries(validTaskFields)
+    .filter(([key, value]) => value !== undefined)
+    .reduce((obj, [key, value]) => {
+      obj[key] = value;
+      return obj;
+    }, {});
+
+  if (cleanedValidTaskFields) {
+    store = getTasksFromStore().map((task) => {
+      if (task.id !== id) {
+        return task;
+      } else {
+        return { ...task, ...cleanedValidTaskFields };
+      }
+    });
+  } else return false;
 }

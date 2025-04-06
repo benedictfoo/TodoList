@@ -1,19 +1,20 @@
 import LogError from "../logging/LogError.js";
 import { getProjectsFromStore } from "../store/ProjectStore.js";
-export default function (input = null) {
+export default function (input = null, options = { titleRequired: true }) {
   // check if no input
   if (!input) {
     LogError("No task given for saving");
     return false;
   }
 
-  const { title, date, description, priority, projectId } = input;
+  const { title, date, description, priority, projectId, completed } = input;
 
   // title Check
-  if (!title) {
+  if (!title && options.titleRequired) {
     LogError("Title is required");
     return false;
-  } else if (title.length > 500) {
+  }
+  if (title && title.length > 500) {
     LogError("Title cannot be greater than 500");
     return false;
   }
@@ -51,5 +52,5 @@ export default function (input = null) {
   }
 
   // return the fields
-  return { title, date, description, priority, projectId };
+  return { title, date, description, priority, projectId, completed };
 }
