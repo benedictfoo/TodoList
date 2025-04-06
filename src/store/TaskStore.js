@@ -45,12 +45,9 @@ let store = [
     date: 8640000000000000,
   },
 ];
-export function getTasksStore() {
+export function getTasksFromStore() {
   return store;
 }
-export function setTasksStore(task) {
+export function addTasktoStore(task) {
   store.push(task);
-}
-export function filterTasksStore(callback) {
-  store = store.filter(callback);
 }
