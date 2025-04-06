@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 export default function ({
   name,
-  color = "grey",
+  color = "DimGray",
   favorited = false,
   id = uuidv4(),
 }) {

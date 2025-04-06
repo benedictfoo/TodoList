@@ -5,6 +5,8 @@ import checkOptionalDescription from "../checkTaskProperties/checkOptionalDescri
 import LogError from "../logging/LogError.js";
 import checkOptionalPriority from "../checkTaskProperties/checkOptionalPriority.js";
 import checkOptionalParentId from "../checkTaskProperties/checkOptionalParentId.js";
+import checkTaskHead from "../checkTaskHeadProperties/checkTaskHead.js";
+import { setTaskHeadsStore } from "../store/getSetFilterTaskHeadsStore.js";
 
 export default function MakeTask(input = null) {
   if (!input) {
@@ -12,7 +14,12 @@ export default function MakeTask(input = null) {
     return;
   }
 
-  const { title, date, description, priority, parentId } = input;
+  const { title, date, description, priority, parentId, taskHead } = input;
+  if (taskHead) {
+    if (checkTaskHead(taskHead)) {
+      setTaskHeadsStore(taskHead);
+    }
+  }
 
   if (
     checkTitle(title) &&
@@ -21,6 +28,6 @@ export default function MakeTask(input = null) {
     checkOptionalPriority(priority) &&
     (parentId ? checkOptionalParentId(parentId) : true)
   ) {
-    return Task({ title, date, description, priority, parentId });
+    return Task({ title, date, description, priority, parentId, taskHead });
   }
 }

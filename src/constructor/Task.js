@@ -9,6 +9,17 @@ export default function ({
   priority = 4,
   completed = false,
   tasks = null,
+  taskHead = null,
 }) {
-  return { title, description, id, parentId, date, priority, completed, tasks };
+  return {
+    title,
+    description,
+    id,
+    parentId,
+    date,
+    priority,
+    completed,
+    tasks,
+    taskHead,
+  };
 }

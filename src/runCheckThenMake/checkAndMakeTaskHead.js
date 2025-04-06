@@ -1,5 +1,5 @@
 import checkTaskHead from "../checkTaskHeadProperties/checkTaskHead.js";
-import TaskHead from "../model/TaskHead.js";
+import TaskHead from "../constructor/TaskHead.js";
 
 export default function checkAndMakeTaskHead(taskHeadObject) {
   if (!taskHeadObject) {

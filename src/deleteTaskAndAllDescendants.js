@@ -1,4 +1,7 @@
-import { filterTasksStore, getTasksStore } from "./store/getSetTasksStore.js";
+import {
+  filterTasksStore,
+  getTasksStore,
+} from "./store/getSetFilterTasksStore.js";
 export default function deleteTaskAndAllDescendants(taskId) {
   const descendants = new Set();
 
