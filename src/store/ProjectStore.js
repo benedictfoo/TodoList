@@ -1,4 +1,29 @@
-let store = [{ name: "Project1", color: "Crimson", favorited: false, id: 1 }];
+let store = [
+  {
+    name: "Project 1",
+    color: "HotPink",
+    favorited: false,
+    id: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327",
+  },
+  {
+    name: "Project 2",
+    color: "DarkOrange",
+    favorited: false,
+    id: "f24be39c-b029-4fac-8a8c-07f9d57b9a79",
+  },
+  {
+    name: "Project 3",
+    color: "DimGray",
+    favorited: true,
+    id: "363b3e2b-448b-4bea-ba37-3ceb73154a6d",
+  },
+  {
+    name: "Project 4",
+    color: "HotPink",
+    favorited: false,
+    id: "e660a3fd-6c8a-4e8e-be46-665a9cabb530",
+  },
+];
 export function getProjectsFromStore() {
   return store;
 }
