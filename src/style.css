@@ -1,2 +1,5 @@
-
-
+@import "modern-normalize";
+body {
+  display: flex;
+  justify-content: flex-start;
+}
