@@ -56,7 +56,7 @@ body {
 .nav {
   padding-inline: calc(var(--spacing) * 4);
   padding-top: calc(var(--spacing) * 3);
-  width: 200px;
+  width: min(300px, 40%);
   background-color: var(--side-nav-color);
 }
 
@@ -68,8 +68,24 @@ body {
   padding: 0;
 }
 
+.nav-item-row {
+  padding-block: calc(var(--spacing) * 4);
+  display: flex;
+  gap: calc(var(--spacing) * 3);
+  flex-basis: 100%;
+  overflow: hidden;
+}
+.nav-item-row span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
 /* unexpanded nav */
 .nav[data-expanded="false"] {
   padding-left: calc(var(--spacing) * 7);
   width: unset;
+}
+.nav[data-expanded="false"] .nav-item-row {
+  display: none;
 }
