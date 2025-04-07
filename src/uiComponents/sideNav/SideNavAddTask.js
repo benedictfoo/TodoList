@@ -1,7 +1,7 @@
 import createElement from "../createElement";
 export default function () {
   const iconButton = createElement(
-    "btn",
+    "button",
     {},
     createElement("i", { class: "fa-regular fa-square-plus" })
   );

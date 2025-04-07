@@ -79,6 +79,11 @@ body {
   flex-basis: 100%;
   overflow: hidden;
 }
+.nav-item-row button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
 .nav-item-row span {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -108,7 +113,10 @@ body {
 .nav-project-row button {
   color: attr(data-color);
 }
-
+.nav-favorite-list,
+.nav-project-list {
+  padding: 0;
+}
 /* unexpanded nav */
 .nav[data-expanded="false"] {
   padding-left: calc(var(--spacing) * 7);
