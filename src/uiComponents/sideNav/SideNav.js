@@ -4,6 +4,7 @@ import SideNavAddTask from "./SideNavAddTask";
 import SideNavInbox from "./SideNavInbox";
 import SideNavToday from "./SideNavToday";
 import SideNavUpcoming from "./SideNavUpcoming";
+import SideNavFavoritesHeading from "./SideNavFavoritesHeading";
 export default function () {
   const sideNav = createElement(
     "nav",
@@ -12,7 +13,8 @@ export default function () {
     SideNavAddTask(),
     SideNavInbox(),
     SideNavToday(),
-    SideNavUpcoming()
+    SideNavUpcoming(),
+    SideNavFavoritesHeading()
   );
   sideNav.addEventListener("click", (e) => {
     const navItemRow = e.target.closest(".nav-item-row");
