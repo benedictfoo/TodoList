@@ -42,7 +42,7 @@ function SideNavProject(project) {
   );
   const span = createElement("span", {}, project.name);
   const row = createElement(
-    "row",
+    "div",
     {
       class: "nav-project-row nav-item-row",
       "data-id": project.id,

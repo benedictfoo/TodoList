@@ -42,7 +42,7 @@ function SideNavFavorite(project) {
   );
   const span = createElement("span", {}, project.name);
   const row = createElement(
-    "row",
+    "div",
     {
       class: "nav-favorite-row nav-item-row",
       "data-id": project.id,

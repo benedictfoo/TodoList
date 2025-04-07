@@ -90,8 +90,8 @@ body {
   text-wrap: nowrap;
 }
 /* Specific nav-item-rows and project/favorite rows active*/
-.nav-item-task-row,
-.nav-item-row.active {
+.nav-item-task-row button,
+.nav-item-row.active button {
   color: var(--side-nav-accent);
 }
 .nav-item-task-row span,
