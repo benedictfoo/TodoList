@@ -46,6 +46,8 @@ body {
 /* Colors */
 :root {
   --side-nav-color: #fcfaf8;
+  --side-nav-accent: #dc4c3e;
+  --side-nav-accent-darker: #c4372b;
 }
 
 /* Spacing */
@@ -69,7 +71,7 @@ body {
 }
 
 .nav-item-row {
-  padding-block: calc(var(--spacing) * 4);
+  padding-top: calc(var(--spacing) * 4);
   display: flex;
   gap: calc(var(--spacing) * 3);
   flex-basis: 100%;
@@ -79,6 +81,16 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   text-wrap: nowrap;
+}
+/* Specific nav-item-rows */
+.nav-item-task-row,
+.nav-item-row.active {
+  color: var(--side-nav-accent);
+}
+.nav-item-task-row span,
+.nav-item-row.active span {
+  color: var(--side-nav-accent-darker);
+  font-weight: bold;
 }
 
 /* unexpanded nav */

@@ -3,13 +3,13 @@ export default function () {
   const iconButton = createElement(
     "btn",
     {},
-    createElement("i", { class: "fa-regular fa-square-plus" })
+    createElement("i", { class: "fa-solid fa-inbox" })
   );
-  const span = createElement("span", {}, "Add task");
+  const span = createElement("span", {}, "Inbox");
   const navItemRow = createElement(
     "div",
     {
-      class: "nav-item-row nav-item-task-row",
+      class: "nav-item-row nav-item-inbox-row",
     },
     iconButton,
     span
