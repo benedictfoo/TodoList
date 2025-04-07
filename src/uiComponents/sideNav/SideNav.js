@@ -6,6 +6,8 @@ import SideNavToday from "./SideNavToday";
 import SideNavUpcoming from "./SideNavUpcoming";
 import SideNavFavoritesHeading from "./SideNavFavoriteHeading";
 import SideNavFavoriteList from "./SideNavFavoriteList";
+import SideNavProjectHeading from "./SideNavProjectHeading";
+import SideNavProjectList from "./SideNavProjectList";
 export default function () {
   const sideNav = createElement(
     "nav",
@@ -16,7 +18,9 @@ export default function () {
     SideNavToday(),
     SideNavUpcoming(),
     SideNavFavoritesHeading(),
-    SideNavFavoriteList()
+    SideNavFavoriteList(),
+    SideNavProjectHeading(),
+    SideNavProjectList()
   );
   sideNav.addEventListener("click", (e) => {
     const navItemRow = e.target.closest(".nav-item-row");
