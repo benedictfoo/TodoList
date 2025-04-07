@@ -8,12 +8,14 @@ import SideNavFavoritesHeading from "./SideNavFavoriteHeading";
 import SideNavFavoriteList from "./SideNavFavoriteList";
 import SideNavProjectHeading from "./SideNavProjectHeading";
 import SideNavProjectList from "./SideNavProjectList";
+import SideNavRow from "./SideNavRow";
 export default function () {
   const sideNav = createElement(
     "nav",
     { class: "nav", "data-expanded": "true" },
     SideNavToggle(),
     SideNavAddTask(),
+    SideNavRow("fa-regular fa-square-plus", "Add task", "nav-item-task-row"),
     SideNavInbox(),
     SideNavToday(),
     SideNavUpcoming(),
