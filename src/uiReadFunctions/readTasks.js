@@ -1,14 +1,12 @@
 import Task from "../constructor/Task";
 import { getTasksFromStore } from "../store/TaskStore";
 import createElement from "../uiComponents/createElement";
+import isNonEmptyObject from "../uiComponents/isNonEmptyObject";
 const acceptableFields = Object.keys(Task({}));
+
 export default function (filter) {
-  // only if object
-  if (
-    typeof filter === "object" &&
-    !Array.isArray(filter) &&
-    Object.keys(filter).length > 0
-  ) {
+  // only if object and not empty and not array
+  if (isNonEmptyObject(filter)) {
     const cleanedFilter = Object.fromEntries(
       Object.entries(filter).filter(([key]) => acceptableFields.includes(key))
     );
