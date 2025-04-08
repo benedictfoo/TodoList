@@ -1,0 +1,14 @@
+import readTasks from "../../uiReadFunctions/readTasks.js";
+import createElement from "../createElement.js";
+import mainContentListItem from "./mainContentListItem.js";
+
+export default function (options) {
+  const tasks = readTasks(options);
+  const taskElements = tasks.map((task) => mainContentListItem(task));
+  const taskList = createElement(
+    "ul",
+    { class: "main-content-list" },
+    ...taskElements
+  );
+  return taskList;
+}
