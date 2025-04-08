@@ -21,6 +21,11 @@ export default function () {
       "Upcoming",
       "nav-item-upcoming-row"
     ),
+    SideNavRow(
+      "fa-regular fa-circle-check",
+      "Completed",
+      "nav-item-completed-row"
+    ),
     sideNavHeading("nav-favorite-heading", "Favorites"),
     SideNavFavoriteOrProjectList(favoriteProjects, "nav-favorite-list"),
     sideNavHeading("nav-project-heading", "Projects"),

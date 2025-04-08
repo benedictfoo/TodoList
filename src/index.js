@@ -7,4 +7,5 @@ script.src = "https://kit.fontawesome.com/9379472a13.js";
 script.crossOrigin = "anonymous";
 document.head.appendChild(script);
 document.body.appendChild(SideNav());
-const tasks = readTasks(undefined);
+const tasks = readTasks({ completed: true });
+console.log(tasks);

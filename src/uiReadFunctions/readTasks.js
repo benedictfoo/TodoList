@@ -13,12 +13,11 @@ export default function (filter) {
     const tasks = getTasksFromStore().filter((task) =>
       Object.entries(cleanedFilter).every(([key, value]) => task[key] === value)
     );
-    console.log(tasks);
-    return;
+
+    return tasks;
   } else {
     const tasks = getTasksFromStore();
-    console.log(tasks);
 
-    return;
+    return tasks;
   }
 }
