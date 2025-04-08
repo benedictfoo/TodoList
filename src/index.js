@@ -11,6 +11,5 @@ document.body.appendChild(SideNav());
 // const tasks = readTasks({ completed: false });
 // console.log(tasks);
 document.body.appendChild(mainContent({ completed: false }, "Inbox"));
-removeMainContent();
-document.body.appendChild(mainContent({ completed: true }, "Completed"));
+
 sideNavEvents();

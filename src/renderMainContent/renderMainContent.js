@@ -1,3 +1,4 @@
+import { getProjectsFromStore } from "../store/ProjectStore";
 import mainContent from "../uiComponents/mainContent/mainContent";
 import removeMainContent from "../uiComponents/mainContent/removeMainContent";
 
@@ -17,6 +18,11 @@ export default function (navItemRow) {
   } else if (navItemRow.closest(".nav-project-row")) {
     removeMainContent();
     const projectId = navItemRow.closest(".nav-project-row").dataset.id;
-    document.body.appendChild(mainContent({ projectId }, "Upcoming"));
+    const projectTitle = getProjectsFromStore().find(
+      (project) => project.id === projectId
+    ).name;
+    console.log(projectTitle);
+
+    document.body.appendChild(mainContent({ projectId }, `${projectTitle}`));
   }
 }

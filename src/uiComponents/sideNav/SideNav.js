@@ -14,7 +14,7 @@ export default function () {
     { class: "nav", "data-expanded": "true" },
     SideNavToggle(),
     SideNavRow("fa-regular fa-square-plus", "Add task", "nav-item-task-row"),
-    SideNavRow("fa-solid fa-inbox", "Inbox", "nav-item-inbox-row"),
+    SideNavRow("fa-solid fa-inbox", "Inbox", "nav-item-inbox-row active"),
     SideNavRow("fa-solid fa-calendar-day", "Today", "nav-item-today-row"),
     SideNavRow(
       "fa-solid fa-calendar-days",

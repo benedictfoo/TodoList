@@ -1,3 +1,5 @@
+import renderMainContent from "../../renderMainContent/renderMainContent";
+import { updateTaskByIdFromStore } from "../../store/TaskStore";
 import createElement from "../createElement";
 
 export default function (task) {
@@ -5,21 +7,20 @@ export default function (task) {
   const mainContentListItem = createElement(
     "li",
     { class: "main-content-list-item", "data-id": task.id },
-    !task.completed && checkButton(),
+    checkButton(),
     title()
   );
   function checkButton() {
     const button = createElement("button", {
-      class: "task-button fa-regular fa-circle",
+      class: `task-button fa-regular ${
+        task.completed ? "fa-circle-check" : "fa-circle"
+      }`,
       "data-id": task.id,
     });
-    button.addEventListener("mouseenter", () => {
-      button.classList.remove("fa-circle");
-      button.classList.add("fa-circle-check");
-    });
-    button.addEventListener("mouseleave", () => {
-      button.classList.add("fa-circle");
-      button.classList.remove("fa-circle-check");
+
+    button.addEventListener("click", () => {
+      updateTaskByIdFromStore(task.id, { completed: !task.completed });
+      renderMainContent(activeRow);
     });
     return button;
   }
