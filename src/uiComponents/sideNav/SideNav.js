@@ -31,13 +31,6 @@ export default function () {
     sideNavHeading("nav-project-heading", "Projects"),
     SideNavFavoriteOrProjectList(allProjects, "nav-project-list")
   );
-  sideNav.addEventListener("click", (e) => {
-    const navItemRow = e.target.closest(".nav-item-row");
-    if (navItemRow) {
-      const allNavRows = document.querySelectorAll(".nav-item-row");
-      allNavRows.forEach((row) => row.classList.remove("active"));
-      navItemRow.classList.add("active");
-    }
-  });
+
   return sideNav;
 }

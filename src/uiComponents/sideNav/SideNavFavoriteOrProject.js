@@ -10,7 +10,7 @@ export default function (project) {
   const row = createElement(
     "div",
     {
-      class: "nav-favorite-row nav-item-row",
+      class: "nav-project-row nav-item-row",
       "data-id": project.id,
     },
     iconButton,
