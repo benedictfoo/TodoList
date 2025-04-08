@@ -22,7 +22,7 @@ export default function () {
       "nav-item-upcoming-row"
     ),
     SideNavRow(
-      "fa-regular fa-circle-check",
+      "fa-solid fa-circle-check",
       "Completed",
       "nav-item-completed-row"
     ),

@@ -1,6 +1,5 @@
 import Task from "../constructor/Task";
 import { getTasksFromStore } from "../store/TaskStore";
-import createElement from "../uiComponents/createElement";
 import isNonEmptyObject from "../uiComponents/isNonEmptyObject";
 const acceptableFields = Object.keys(Task({}));
 
