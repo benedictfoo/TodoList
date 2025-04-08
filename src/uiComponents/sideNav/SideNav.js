@@ -3,32 +3,11 @@ import SideNavToggle from "./SideNavToggle";
 import SideNavRow from "./SideNavRow";
 import sideNavHeading from "./sideNavHeading";
 import SideNavFavoriteOrProjectList from "./SideNavFavoriteOrProjectList";
+import { getProjectsFromStore } from "../../store/ProjectStore";
 const favoriteProjects = [
-  {
-    name: "Project 1",
-    color: "HotPink",
-    favorited: true,
-    id: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327",
-  },
-  {
-    name: "Project 2",
-    color: "DarkOrange",
-    favorited: true,
-    id: "f24be39c-b029-4fac-8a8c-07f9d57b9a79",
-  },
-  {
-    name: "Project 3",
-    color: "DimGray",
-    favorited: true,
-    id: "363b3e2b-448b-4bea-ba37-3ceb73154a6d",
-  },
-  {
-    name: "Project 4",
-    color: "HotPink",
-    favorited: true,
-    id: "e660a3fd-6c8a-4e8e-be46-665a9cabb530",
-  },
+  ...getProjectsFromStore().filter((project) => project.favorited),
 ];
+const allProjects = [...getProjectsFromStore()];
 export default function () {
   const sideNav = createElement(
     "nav",
@@ -45,7 +24,7 @@ export default function () {
     sideNavHeading("nav-favorite-heading", "Favorites"),
     SideNavFavoriteOrProjectList(favoriteProjects, "nav-favorite-list"),
     sideNavHeading("nav-project-heading", "Projects"),
-    SideNavFavoriteOrProjectList(favoriteProjects, "nav-project-list")
+    SideNavFavoriteOrProjectList(allProjects, "nav-project-list")
   );
   sideNav.addEventListener("click", (e) => {
     const navItemRow = e.target.closest(".nav-item-row");
