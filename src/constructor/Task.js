@@ -1,10 +1,8 @@
-import { v4 as uuidv4 } from "uuid";
-
 export default function ({
   title,
   description = null,
   id = uuidv4(),
-  date = Date.now(),
+  date = null,
   priority = 4,
   completed = false,
   projectId = null,
