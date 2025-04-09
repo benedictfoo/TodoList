@@ -2,7 +2,7 @@ import SideNavToggle from "./SideNavToggle";
 import SideNavRow from "./SideNavRow";
 import sideNavHeading from "./sideNavHeading";
 import SideNavFavoriteOrProjectList from "./SideNavFavoriteOrProjectList";
-
+import * as Classes from "../../../appVariables/classes";
 import createElement from "../../uiFunctions/createElement";
 import { getProjectsFromStore } from "../../../backend/store/ProjectStore";
 const favoriteProjects = [
@@ -14,27 +14,27 @@ export default function () {
     "nav",
     { class: "nav", "data-expanded": "true" },
     SideNavToggle(),
-    SideNavRow("fa-regular fa-square-plus", "Add task", "nav-item-task-row"),
-    SideNavRow("fa-solid fa-inbox", "Inbox", "nav-item-inbox-row"),
     SideNavRow(
-      "fa-solid fa-calendar-day",
-      "Today",
-      "nav-item-today-row  active"
+      Classes.addTaskButtonClasses,
+      "Add task",
+      Classes.addTaskClasses
     ),
+    SideNavRow(Classes.inboxButtonClasses, "Inbox", Classes.inboxClasses),
+    SideNavRow(Classes.todayButtonClasses, "Today", Classes.todayClasses),
     SideNavRow(
-      "fa-solid fa-calendar-days",
+      Classes.upcomingButtonClasses,
       "Upcoming",
-      "nav-item-upcoming-row"
+      Classes.upcomingClasses
     ),
     SideNavRow(
-      "fa-solid fa-circle-check",
+      Classes.completedButtonClasses,
       "Completed",
-      "nav-item-completed-row"
+      Classes.completedClasses
     ),
-    sideNavHeading("nav-favorite-heading", "Favorites"),
-    SideNavFavoriteOrProjectList(favoriteProjects, "nav-favorite-list"),
-    sideNavHeading("nav-project-heading", "Projects"),
-    SideNavFavoriteOrProjectList(allProjects, "nav-project-list")
+    sideNavHeading(Classes.favoriteHeadingClasses, "Favorites"),
+    SideNavFavoriteOrProjectList(favoriteProjects, Classes.favoriteListClasses),
+    sideNavHeading(Classes.projectHeadingClasses, "Projects"),
+    SideNavFavoriteOrProjectList(allProjects, Classes.projectListClasses)
   );
 
   return sideNav;

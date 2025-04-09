@@ -1,5 +1,5 @@
 import createElement from "../../uiFunctions/createElement";
-
+import { projectListItemClasses } from "../../../appVariables/classes";
 export default function (project) {
   const iconButton = createElement(
     "button",
@@ -8,9 +8,9 @@ export default function (project) {
   );
   const span = createElement("span", {}, project.name);
   const row = createElement(
-    "div",
+    "li",
     {
-      class: "nav-project-row nav-item-row",
+      class: projectListItemClasses,
       "data-id": project.id,
     },
     iconButton,
