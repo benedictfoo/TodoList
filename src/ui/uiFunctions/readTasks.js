@@ -1,6 +1,6 @@
 import { isSameDay, startOfToday } from "date-fns";
-import Task from "../constructor/Task";
-import { getTasksFromStore } from "../store/TaskStore";
+import Task from "../../constructor/Task";
+import { getTasksFromStore } from "../../store/TaskStore";
 import isNonEmptyObject from "../uiComponents/isNonEmptyObject";
 const acceptableFields = Object.keys(Task({}));
 

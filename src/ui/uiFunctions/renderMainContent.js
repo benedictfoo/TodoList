@@ -1,4 +1,4 @@
-import { getProjectsFromStore } from "../store/ProjectStore";
+import { getProjectsFromStore } from "../../store/ProjectStore";
 import mainContent from "../uiComponents/mainContent/mainContent";
 import removeMainContent from "../uiComponents/mainContent/removeMainContent";
 

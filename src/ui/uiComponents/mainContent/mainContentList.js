@@ -1,4 +1,4 @@
-import readTasks from "../../uiReadFunctions/readTasks.js";
+import readTasks from "../../uiFunctions/readTasks.js";
 import createElement from "../createElement.js";
 import mainContentListItem from "./mainContentListItem.js";
 

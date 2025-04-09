@@ -1,9 +1,10 @@
-import createElement from "../createElement";
 import SideNavToggle from "./SideNavToggle";
 import SideNavRow from "./SideNavRow";
 import sideNavHeading from "./sideNavHeading";
 import SideNavFavoriteOrProjectList from "./SideNavFavoriteOrProjectList";
-import { getProjectsFromStore } from "../../store/ProjectStore";
+
+import createElement from "../createElement";
+import { getProjectsFromStore } from "../../../store/ProjectStore";
 const favoriteProjects = [
   ...getProjectsFromStore().filter((project) => project.favorited),
 ];

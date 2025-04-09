@@ -1,5 +1,5 @@
-import renderMainContent from "../../renderMainContent/renderMainContent";
-import { updateTaskByIdFromStore } from "../../store/TaskStore";
+import { updateTaskByIdFromStore } from "../../../store/TaskStore";
+import renderMainContent from "../../uiFunctions/renderMainContent";
 import createElement from "../createElement";
 
 export default function (task) {

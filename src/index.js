@@ -1,8 +1,8 @@
 import "./style.css";
-import SideNav from "./uiComponents/sideNav/SideNav";
-import mainContent from "./uiComponents/mainContent/mainContent";
-import removeMainContent from "./uiComponents/mainContent/removeMainContent";
-import sideNavEvents from "./events/sideNavEvents";
+
+import mainContent from "./ui/uiComponents/mainContent/mainContent";
+import sideNavEvents from "./ui/events/sideNavEvents";
+import SideNav from "./ui/uiComponents/sideNav/SideNav";
 const script = document.createElement("script");
 script.src = "https://kit.fontawesome.com/9379472a13.js";
 script.crossOrigin = "anonymous";

@@ -1,5 +1,5 @@
-import addTaskModal from "../addTaskModal/addTaskModal";
-import renderMainContent from "../renderMainContent/renderMainContent";
+import addTaskModal from "../uiFunctions/addTaskModal";
+import renderMainContent from "../uiFunctions/renderMainContent";
 
 export default function () {
   document.querySelector(".nav").addEventListener("click", (e) => {
