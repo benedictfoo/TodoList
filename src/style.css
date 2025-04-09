@@ -78,6 +78,7 @@ body {
   gap: calc(var(--spacing) * 3);
   flex-basis: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 .nav-item-row button {
   padding: 0;
@@ -139,4 +140,8 @@ body {
 .main-content-list {
   list-style: none;
   padding: 0;
+}
+
+.task-button {
+  cursor: pointer;
 }
