@@ -1,4 +1,4 @@
-import createElement from "../createElement";
+import createElement from "../../uiFunctions/createElement";
 export default function (buttonClasses, spanName, rowAdditionalClasses, id) {
   const iconButton = createElement(
     "button",

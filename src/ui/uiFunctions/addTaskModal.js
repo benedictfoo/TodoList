@@ -1,4 +1,4 @@
-import createElement from "../uiComponents/createElement";
+import createElement from "./createElement";
 import modal from "../uiComponents/createTaskModal/modal";
 import overlay from "../uiComponents/createTaskModal/overlay";
 import titleDescription from "../uiComponents/createTaskModal/titleDescription";

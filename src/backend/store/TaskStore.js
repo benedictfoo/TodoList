@@ -53,6 +53,7 @@ let store = [
 export function getTasksFromStore() {
   return store;
 }
+export function getFilteredTasksFromStore() {}
 export function getTaskFromStore(id) {
   return getTasksFromStore().find((task) => task.id === id);
 }
@@ -68,15 +69,19 @@ export function updateTaskByIdFromStore(id, input) {
     LogError("Invalid Input");
     return false;
   }
+  // find task
   const foundTask = getTaskFromStore(id);
   if (!foundTask) {
     LogError("Something went wrong.Task cannot be updated.");
     return false;
   }
+
+  // validate task fields
   const validTaskFields = returnFalseOrValidTaskFields(input, {
     titleRequired: false,
   });
 
+  // store the updated task
   if (validTaskFields) {
     store = getTasksFromStore().map((task) => {
       if (task.id !== id) {

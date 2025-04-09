@@ -1,6 +1,6 @@
 import { updateTaskByIdFromStore } from "../../../backend/store/TaskStore";
 import renderMainContent from "../../uiFunctions/renderMainContent";
-import createElement from "../createElement";
+import createElement from "../../uiFunctions/createElement";
 
 export default function (task) {
   const activeRow = document.querySelector(".nav-item-row.active");

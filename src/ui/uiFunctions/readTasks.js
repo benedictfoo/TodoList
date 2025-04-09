@@ -1,15 +1,13 @@
 import { isSameDay, startOfToday } from "date-fns";
 import Task from "../../backend/constructor/Task";
 import { getTasksFromStore } from "../../backend/store/TaskStore";
-import isNonEmptyObject from "../uiComponents/isNonEmptyObject";
-const acceptableFields = Object.keys(Task({}));
+import isNonEmptyObject from "./isNonEmptyObject";
+import cleanFilter from "./cleanFilter";
 
 export default function (filter) {
   // only if object and not empty and not array
   if (isNonEmptyObject(filter)) {
-    const cleanedFilter = Object.fromEntries(
-      Object.entries(filter).filter(([key]) => acceptableFields.includes(key))
-    );
+    const cleanedFilter = cleanFilter(filter);
     const tasks = getTasksFromStore().filter((task) => {
       return Object.entries(cleanedFilter).every(([key, value]) => {
         if (key === "date" && value === "upcoming") {

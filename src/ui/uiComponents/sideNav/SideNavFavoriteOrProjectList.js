@@ -1,4 +1,4 @@
-import createElement from "../createElement";
+import createElement from "../../uiFunctions/createElement";
 import SideNavFavoriteOrProject from "./SideNavFavoriteOrProject";
 
 export default function (favoriteProjects, classes) {

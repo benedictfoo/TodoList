@@ -3,7 +3,7 @@ import SideNavRow from "./SideNavRow";
 import sideNavHeading from "./sideNavHeading";
 import SideNavFavoriteOrProjectList from "./SideNavFavoriteOrProjectList";
 
-import createElement from "../createElement";
+import createElement from "../../uiFunctions/createElement";
 import { getProjectsFromStore } from "../../../backend/store/ProjectStore";
 const favoriteProjects = [
   ...getProjectsFromStore().filter((project) => project.favorited),
