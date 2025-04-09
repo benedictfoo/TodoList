@@ -17,6 +17,14 @@ export default function (task) {
       }`,
       "data-id": task.id,
     });
+    button.style.color =
+      task.priority === 1
+        ? "red"
+        : task.priority === 2
+        ? "orange"
+        : task.priority === 3
+        ? "blue"
+        : "gray";
 
     button.addEventListener("click", () => {
       updateTaskByIdFromStore(task.id, { completed: !task.completed });

@@ -8,7 +8,7 @@ let store = [
     description: "This is a task description.",
     id: "3d976551-9a06-4359-9cf4-29e33f1a907f",
     date: new Date(),
-    priority: 2,
+    priority: 4,
     completed: false,
     projectId: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327", // Project 1
   },
@@ -44,8 +44,8 @@ let store = [
     title: "Task 5",
     description: "This is a task description.",
     id: "2d3546ff-d68f-435d-bb59-8731bff3025d",
-    date: 1743922184645,
-    priority: 1,
+    date: new Date(),
+    priority: 3,
     completed: false,
     projectId: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327", // Project 1
   },
