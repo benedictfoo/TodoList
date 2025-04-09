@@ -32,15 +32,14 @@ export const mainListItemButtonUnCompletedClasses = "fa-circle";
 
 // TaskCreateOverlay
 
-export const taskCreateOverlayClasses = "task-create-overlay";
-export const taskCreateModalClasses = "task-create-modal";
+export const actionOverlayClasses = "action-overlay";
+export const actionModalClasses = "action-modal";
 export const taskCreateInputClasses = "task-create-input";
 export const taskCreateInputDescriptionClasses = `${taskCreateInputClasses} task-create-description`;
 export const taskCreateInputTitleClasses = `${taskCreateInputClasses} task-create-title`;
 
 export const taskCreateOptionalClasses = "task-create-optionals";
-export const taskCreateOptionalDateClasses = "task-create-optionals-date";
-export const taskCreateOptionalDateButtonClasses =
-  "fa-regular fa-calendar-plus";
-export const taskCreateOptionalPriorityClasses = "task-create-optionals-date";
-export const taskCreateOptionalPriorityButtonClasses = "fa-solid fa-flag";
+export const taskCreateDateClasses = "task-create-optionals-date";
+export const taskCreateDateButtonClasses = "fa-regular fa-calendar-plus";
+export const taskCreatePriorityClasses = "task-create-optionals-date";
+export const taskCreatePriorityButtonClasses = "fa-solid fa-flag";

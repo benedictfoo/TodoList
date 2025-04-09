@@ -1,4 +1,4 @@
-import { taskCreateModalClasses } from "../../../appVariables/classes";
+import { actionModalClasses } from "../../../appVariables/classes";
 import createElement from "../../uiFunctions/createElement";
 
 export default function (
@@ -8,7 +8,7 @@ export default function (
 ) {
   return createElement(
     "div",
-    { class: taskCreateModalClasses },
+    { class: actionModalClasses },
     titleInputElement,
     descriptionInputElement,
     optionals

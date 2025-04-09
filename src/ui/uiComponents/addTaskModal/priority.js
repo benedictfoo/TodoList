@@ -1,4 +1,4 @@
-import { taskCreateOptionalPriorityClasses } from "../../../appVariables/classes";
+import { taskCreatePriorityClasses } from "../../../appVariables/classes";
 import addActionModalInsideOverlay from "../../uiFunctions/addActionModalInsideOverlay";
 import createElement from "../../uiFunctions/createElement";
 import { priorityButton } from "./priorityButton";
@@ -6,7 +6,7 @@ import { priorityButton } from "./priorityButton";
 export const priority = createElement(
   "button",
   {
-    class: taskCreateOptionalPriorityClasses,
+    class: taskCreatePriorityClasses,
   },
   priorityButton,
   "Priority"
