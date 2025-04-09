@@ -1,4 +1,4 @@
-import { updateTaskByIdFromStore } from "../../../store/TaskStore";
+import { updateTaskByIdFromStore } from "../../../backend/store/TaskStore";
 import renderMainContent from "../../uiFunctions/renderMainContent";
 import createElement from "../createElement";
 

@@ -1,6 +1,6 @@
 import { addDays, startOfDay } from "date-fns";
 import returnFalseOrValidTaskFields from "../getFields/returnFalseOrValidTaskFields.js";
-import LogError from "../logging/LogError.js";
+import LogError from "../../logging/LogError.js";
 
 let store = [
   {

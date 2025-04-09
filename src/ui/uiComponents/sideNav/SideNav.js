@@ -4,7 +4,7 @@ import sideNavHeading from "./sideNavHeading";
 import SideNavFavoriteOrProjectList from "./SideNavFavoriteOrProjectList";
 
 import createElement from "../createElement";
-import { getProjectsFromStore } from "../../../store/ProjectStore";
+import { getProjectsFromStore } from "../../../backend/store/ProjectStore";
 const favoriteProjects = [
   ...getProjectsFromStore().filter((project) => project.favorited),
 ];

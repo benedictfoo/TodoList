@@ -1,5 +1,6 @@
-import LogError from "../logging/LogError.js";
+import LogError from "../../logging/LogError.js";
 import { getProjectsFromStore } from "../store/ProjectStore.js";
+
 export default function (input = null, options = { titleRequired: true }) {
   // check if no input
   if (!input) {

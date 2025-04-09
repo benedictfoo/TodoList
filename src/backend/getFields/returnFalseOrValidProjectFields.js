@@ -1,5 +1,5 @@
-import LogError from "../logging/LogError.js";
-import { getProjectsFromStore } from "../store/ProjectStore.js";
+import LogError from "../../logging/LogError.js";
+
 import { acceptableColors } from "../constructor/Project.js";
 export default function (input = null) {
   // check if no input
