@@ -52,6 +52,8 @@ export default function (input = null, options = { titleRequired: true }) {
     }
   }
 
-  // return the fields
-  return { title, date, description, priority, projectId, completed };
+  // return the non empty fields
+  return Object.fromEntries(
+    Object.entries(input).filter(([_, value]) => value !== undefined)
+  );
 }
