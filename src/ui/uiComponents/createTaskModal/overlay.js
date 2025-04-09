@@ -8,7 +8,6 @@ export default function (modalElement) {
   );
 
   overlay.addEventListener("click", (e) => {
-    console.log(modalElement);
     if (!modalElement.contains(e.target)) {
       overlay.remove();
     }

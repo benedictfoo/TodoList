@@ -4,7 +4,6 @@ import renderMainContent from "../uiFunctions/renderMainContent";
 export default function () {
   document.querySelector(".nav").addEventListener("click", (e) => {
     // Delete all active except selected
-    console.log("nav clicked");
 
     const navItemRow = e.target.closest(".nav-item-row");
     if (!navItemRow) {
