@@ -1,4 +1,7 @@
-import { taskCreatePriorityClasses } from "../../../appVariables/classes";
+import {
+  priorityModalClasses,
+  taskCreateOptionalButtonClasses,
+} from "../../../appVariables/classes";
 import addActionModalInsideOverlay from "../../uiFunctions/addActionModalInsideOverlay";
 import createElement from "../../uiFunctions/createElement";
 import { priorityButton } from "./priorityButton";
@@ -6,14 +9,14 @@ import { priorityButton } from "./priorityButton";
 export const priority = createElement(
   "button",
   {
-    class: taskCreatePriorityClasses,
+    class: taskCreateOptionalButtonClasses,
   },
   priorityButton,
   "Priority"
 );
 
 priority.addEventListener("click", () => {
-  const modal = createElement("div", { class: "optional-modal" }, "modal");
+  const modal = createElement("div", { class: priorityModalClasses }, "modal");
 
   const overlay = addActionModalInsideOverlay(modal);
 
