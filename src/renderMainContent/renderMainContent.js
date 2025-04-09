@@ -8,10 +8,10 @@ export default function (navItemRow) {
     document.body.appendChild(mainContent({ completed: false }, "Inbox"));
   } else if (navItemRow.closest(".nav-item-today-row")) {
     removeMainContent();
-    document.body.appendChild(mainContent({ date: 1111 }, "Today"));
+    document.body.appendChild(mainContent({ date: "today" }, "Today"));
   } else if (navItemRow.closest(".nav-item-upcoming-row")) {
     removeMainContent();
-    document.body.appendChild(mainContent({ date: 111 }, "Upcoming"));
+    document.body.appendChild(mainContent({ date: "upcoming" }, "Upcoming"));
   } else if (navItemRow.closest(".nav-item-completed-row")) {
     removeMainContent();
     document.body.append(mainContent({ completed: true }, "Completed"));

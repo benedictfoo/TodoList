@@ -1,3 +1,4 @@
+import { addDays, startOfDay } from "date-fns";
 import returnFalseOrValidTaskFields from "../getFields/returnFalseOrValidTaskFields.js";
 import LogError from "../logging/LogError.js";
 
@@ -6,7 +7,7 @@ let store = [
     title: "Task 1",
     description: "This is a task description.",
     id: "3d976551-9a06-4359-9cf4-29e33f1a907f",
-    date: 1743922184643,
+    date: new Date(),
     priority: 2,
     completed: false,
     projectId: "2e58f2fa-1ede-4f6b-9274-a1490c8ee327", // Project 1
@@ -16,8 +17,8 @@ let store = [
     title: "Task 2",
     description: "This is a task description.",
     id: "582445b1-8bd1-491c-94fe-0259617c0d2b",
-    date: 1743922184643,
-    priority: 4,
+    date: startOfDay(addDays(new Date(), 1)),
+    priority: 1,
     completed: false,
     projectId: "f24be39c-b029-4fac-8a8c-07f9d57b9a79", // Project 2
   },
