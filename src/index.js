@@ -10,6 +10,8 @@ document.head.appendChild(script);
 document.body.appendChild(SideNav());
 // const tasks = readTasks({ completed: false });
 // console.log(tasks);
-document.body.appendChild(mainContent({ completed: false }, "Inbox"));
+document.body.appendChild(
+  mainContent({ completed: false, date: "today" }, "Today")
+);
 
 sideNavEvents();

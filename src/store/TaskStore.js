@@ -17,7 +17,7 @@ let store = [
     title: "Task 2",
     description: "This is a task description.",
     id: "582445b1-8bd1-491c-94fe-0259617c0d2b",
-    date: startOfDay(addDays(new Date(), 1)),
+    date: startOfDay(addDays(new Date(), -1)),
     priority: 1,
     completed: false,
     projectId: "f24be39c-b029-4fac-8a8c-07f9d57b9a79", // Project 2
