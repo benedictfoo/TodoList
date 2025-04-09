@@ -145,3 +145,15 @@ body {
 .task-button {
   cursor: pointer;
 }
+
+/* Task Create */
+.task-create-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: blue;
+}
+.task-create-modal {
+  width: 500px;
+  height: 100px;
+  background-color: #c4372b;
+}
