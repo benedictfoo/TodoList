@@ -1,7 +1,11 @@
 import { updateTaskByIdFromStore } from "../../../backend/store/TaskStore";
 import renderMainContent from "../../uiFunctions/renderMainContent";
 import createElement from "../../uiFunctions/createElement";
-
+import {
+  mainListItemButtonClasses,
+  mainListItemButtonUnCompletedClasses,
+  mainListItemButtonCompletedClasses,
+} from "../../../appVariables/classes";
 export default function (task) {
   const activeRow = document.querySelector(".nav-item-row.active");
   const mainContentListItem = createElement(
@@ -12,8 +16,10 @@ export default function (task) {
   );
   function checkButton() {
     const button = createElement("button", {
-      class: `task-button fa-regular ${
-        task.completed ? "fa-circle-check" : "fa-circle"
+      class: `${mainListItemButtonClasses} ${
+        task.completed
+          ? mainListItemButtonCompletedClasses
+          : mainListItemButtonUnCompletedClasses
       }`,
       "data-id": task.id,
     });

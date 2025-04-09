@@ -21,4 +21,6 @@ export const mainClasses = "main-content";
 export const mainHeadingClasses = "main-content-heading";
 export const mainListClasses = "main-content-list";
 export const mainListItemClasses = "main-content-list-item";
-export const mainListItemButtonClasses = "task-button fa-regular fa-circle";
+export const mainListItemButtonClasses = "task-button fa-regular";
+export const mainListItemButtonCompletedClasses = "fa-circle-check";
+export const mainListItemButtonUnCompletedClasses = "fa-circle";
