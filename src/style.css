@@ -157,3 +157,15 @@ body {
   height: 100px;
   background-color: #c4372b;
 }
+
+.optional-modal {
+  background-color: pink;
+  width: 500px;
+  height: 500px;
+}
+
+.optional-overlay {
+  background: green;
+  position: absolute;
+  inset: 0;
+}
