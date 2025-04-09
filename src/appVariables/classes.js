@@ -29,3 +29,18 @@ export const mainListItemClasses = "main-content-list-item";
 export const mainListItemButtonClasses = "task-button fa-regular";
 export const mainListItemButtonCompletedClasses = "fa-circle-check";
 export const mainListItemButtonUnCompletedClasses = "fa-circle";
+
+// TaskCreateOverlay
+
+export const taskCreateOverlayClasses = "task-create-overlay";
+export const taskCreateModalClasses = "task-create-modal";
+export const taskCreateInputClasses = "task-create-input";
+export const taskCreateInputDescriptionClasses = `${taskCreateInputClasses} task-create-description`;
+export const taskCreateInputTitleClasses = `${taskCreateInputClasses} task-create-title`;
+
+export const taskCreateOptionalClasses = "task-create-optionals";
+export const taskCreateOptionalDateClasses = "task-create-optionals-date";
+export const taskCreateOptionalDateButtonClasses =
+  "fa-regular fa-calendar-plus";
+export const taskCreateOptionalPriorityClasses = "task-create-optionals-date";
+export const taskCreateOptionalPriorityButtonClasses = "fa-solid fa-flag";

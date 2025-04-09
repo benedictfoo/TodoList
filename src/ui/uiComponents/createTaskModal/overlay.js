@@ -1,9 +1,10 @@
+import { taskCreateOverlayClasses } from "../../../appVariables/classes";
 import createElement from "../../uiFunctions/createElement";
 
 export default function (modalElement) {
   const overlay = createElement(
     "div",
-    { class: "task-create-overlay" },
+    { class: taskCreateOverlayClasses },
     modalElement
   );
 
