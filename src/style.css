@@ -147,13 +147,3 @@ body {
 }
 
 /* Task Create */
-.action-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: blue;
-}
-.action-modal {
-  width: 500px;
-  height: 100px;
-  background-color: #c4372b;
-}
