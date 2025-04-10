@@ -1,3 +1,4 @@
+import taskModal from "../uiComponents/modal/taskModal";
 import renderMainContent from "../uiFunctions/renderMainContent";
 
 export default function () {
@@ -9,6 +10,7 @@ export default function () {
       return;
     } else if (navItemRow.classList.contains("nav-item-task-row")) {
       // handle add task
+      taskModal();
     } else if (navItemRow) {
       const allNavRows = document.querySelectorAll(".nav-item-row");
       allNavRows.forEach((row) => row.classList.remove("active"));

@@ -146,4 +146,25 @@ body {
   cursor: pointer;
 }
 
-/* Task Create */
+/* Task Modal */
+.task-modal {
+  position: fixed;
+  z-index: 1;
+  padding: 10% 20%;
+  height: 100vh;
+}
+.task-modal-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.title-input,
+.description-input {
+  flex-basis: 100%;
+}
+.modal-content-row {
+  flex-basis: 100%;
+  display: flex;
+}
+.modal-content-cancel {
+  margin-left: auto;
+}

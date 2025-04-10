@@ -8,7 +8,14 @@ export default function (input = null, options = { titleRequired: true }) {
     return false;
   }
 
-  const { title, date, description, priority, projectId, completed } = input;
+  const {
+    title,
+    date = null,
+    description,
+    priority,
+    projectId,
+    completed,
+  } = input;
 
   // title Check
   if (!title && options.titleRequired) {
@@ -51,6 +58,7 @@ export default function (input = null, options = { titleRequired: true }) {
       return false;
     }
   }
+  console.log(date);
 
   // return the non empty fields
   return Object.fromEntries(
